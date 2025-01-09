@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension method="upgrade" group="vmpayment" type="plugin" version="3.0">
+    <name>VM Payment - Payment_Sensebank Module</name>
+    <creationDate>October 2024</creationDate>
+    <author>Payment_Sensebank</author>
+    <authorUrl>https://sensebank.ua/</authorUrl>
+    <copyright>(C) 2024 Payment_Sensebank. All rights reserved.</copyright>
+    <license>GNU/GPLv3 or late</license>
+    <version>3.0.1</version>
+
+    <description>
+        <![CDATA[
+			This VirtueMart 3.x or 4.x module will be able to offer the most frequently used national and international online payment methods.
+		]]>
+    </description>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_vmpayment_payment_sensebank.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_vmpayment_payment_sensebank.ini</language>
+    </languages>
+
+    <files>
+        <folder>payment_sensebank</folder>
+        <folder>language</folder>
+        <filename plugin="payment_sensebank">payment_sensebank.php</filename>
+    </files>
+
+    <vmconfig>
+        <fields addpath="/administrator/components/com_virtuemart/fields"/>
+        <fields name="params">
+            <fieldset name="basic">
+
+                <field class="level1" type="vmtitle" default="" description="VMPAYMENT_PAYMENT_SENSEBANK_SETTINGS_HEADER1"/>
+
+                <field name="merchant" type="text" size="40" label="VMPAYMENT_PAYMENT_SENSEBANK_LOGIN_LABEL" description="" default=""/>
+                <field name="password" type="text" size="40" label="VMPAYMENT_PAYMENT_SENSEBANK_PASSWORD_LABEL" description="" default=""/>
+                <field name="test_mode" type="list" default="1" label="VMPAYMENT_PAYMENT_SENSEBANK_TEST_MODE_LABEL" description="">
+                    <option value="1">VMPAYMENT_PAYMENT_SENSEBANK_OPTION_ENABLE</option>
+                    <option value="0">VMPAYMENT_PAYMENT_SENSEBANK_OPTION_DISABLE</option>
+                </field>
+                <field name="two_step" type="list" default="0" label="VMPAYMENT_PAYMENT_SENSEBANK_PHASE_LABEL" description="">
+                    <option value="0">VMPAYMENT_PAYMENT_SENSEBANK_OPTION_DISABLE</option>
+                    <option value="1">VMPAYMENT_PAYMENT_SENSEBANK_OPTION_ENABLE</option>
+                </field>
+
+                <field class="level1" type="vmtitle" default="" description="VMPAYMENT_PAYMENT_SENSEBANK_SETTINGS_HEADER2"/>
+                <field name="payment_logos" type="vmfiles" multiple="true" directory="/images/virtuemart/payment"
+                       hide_none="1" label="VMPAYMENT_STANDARD_LOGOS"
+                       size="40"
+                       description="VMPAYMENT_STANDARD_LOGOS_TIP" />
+                <field name="payment_sensebank_send_order" type="list" default="0" label="VMPAYMENT_PAYMENT_SENSEBANK_SEND_ORDER_LABEL"
+                       description="VMPAYMENT_PAYMENT_SENSEBANK_SEND_ORDER_DESCRIPTION">
+                    <option value="1">VMPAYMENT_PAYMENT_SENSEBANK_OPTION_ENABLE</option>
+                    <option value="0">VMPAYMENT_PAYMENT_SENSEBANK_OPTION_DISABLE</option>
+                </field>
+
+            </fieldset>
+        </fields>
+    </vmconfig>
+</extension>
