@@ -1,8 +1,8 @@
 <?php
 define('PAYMENT_SENSEBANK_PAYMENT_NAME', 'Sense Bank');
 
-define('PAYMENT_SENSEBANK_PROD_URL' , 'https://pay.sensebank.com.ua/payment/rest/');
-define('PAYMENT_SENSEBANK_TEST_URL' , 'https://sand.sensebank.com.ua/payment/rest/');
+define('PAYMENT_SENSEBANK_PROD_URL' , 'https://https://pay.sensebank.com.ua/ml/v1/payment/');
+define('PAYMENT_SENSEBANK_TEST_URL' , 'https://sand.sensebank.com.ua/ml/v1/payment/');
 
 //define('PAYMENT_SENSEBANK_ENABLE_LOGGING', true);
 define('PAYMENT_SENSEBANK_ENABLE_CART_OPTIONS', false);
